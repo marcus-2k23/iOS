@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fz2-KX-xJy">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cqM-04-6xN">
+            <objects>
+                <navigationController id="Fz2-KX-xJy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U9a-nZ-Dfb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aBo-Zw-oNR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Puk-Vz-MXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-693" y="92"/>
+        </scene>
+        <!--Kids Story App-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="8829569_Lab05" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kids_reading" translatesAutoresizingMaskIntoConstraints="NO" id="vuO-rm-x3e">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hUV-mq-rdD">
+                                <rect key="frame" x="162.66666666666666" y="357" width="89" height="182"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9g0-nL-cCC">
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <state key="normal" title="Level 1 Story">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="PKX-1L-Nh0" kind="show" id="XbB-Tf-RDe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdM-jo-2kF">
+                                        <rect key="frame" x="0.0" y="80" width="89" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <state key="normal" title="Level 2 Story">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="8bS-qz-QgB" kind="show" id="XJg-Ac-dM8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruc-HM-paX">
+                                        <rect key="frame" x="0.0" y="160" width="89" height="22"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <state key="normal" image="info.circle" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vMi-hW-PVt" kind="show" id="gMZ-hv-pcj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vuO-rm-x3e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="50w-Ug-d95"/>
+                            <constraint firstItem="vuO-rm-x3e" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AQk-ZP-H0m"/>
+                            <constraint firstItem="vuO-rm-x3e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DoT-Np-mVl"/>
+                            <constraint firstItem="vuO-rm-x3e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FbD-5E-xkF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vuO-rm-x3e" secondAttribute="bottom" id="U0T-Nn-dZt"/>
+                            <constraint firstItem="hUV-mq-rdD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vyb-1X-OZK"/>
+                            <constraint firstItem="hUV-mq-rdD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZtX-D8-wMH"/>
+                            <constraint firstAttribute="trailing" secondItem="vuO-rm-x3e" secondAttribute="trailing" id="p3u-md-GjS"/>
+                            <constraint firstItem="vuO-rm-x3e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ruy-xh-SDe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kids Story App" id="42y-gl-S6s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+        </scene>
+        <!--About Us-->
+        <scene sceneID="zVv-ck-stS">
+            <objects>
+                <viewController id="vMi-hW-PVt" customClass="aboutUsViewController" customModule="8829569_Lab05" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H5v-jD-q9X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kids_reading" translatesAutoresizingMaskIntoConstraints="NO" id="zKx-6a-iWl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft1-31-G9h">
+                                <rect key="frame" x="89.666666666666686" y="288" width="235" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="A63-0r-46k"/>
+                                    <constraint firstAttribute="height" constant="320" id="Y8y-w3-rQH"/>
+                                </constraints>
+                                <string key="text">Stories App for Kids for ages 1 to 7. Level 1 stories is for kids between age 1 to 4 and Level 2 stories is for kids between ages 4 to 7.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mbv-8L-Xqs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zKx-6a-iWl" firstAttribute="top" secondItem="mbv-8L-Xqs" secondAttribute="top" id="95j-Y3-42X"/>
+                            <constraint firstItem="zKx-6a-iWl" firstAttribute="leading" secondItem="mbv-8L-Xqs" secondAttribute="leading" id="DtQ-tu-8Qs"/>
+                            <constraint firstItem="zKx-6a-iWl" firstAttribute="trailing" secondItem="mbv-8L-Xqs" secondAttribute="trailing" id="FaF-fk-8EO"/>
+                            <constraint firstItem="Ft1-31-G9h" firstAttribute="centerY" secondItem="H5v-jD-q9X" secondAttribute="centerY" id="QY4-Fs-DDp"/>
+                            <constraint firstItem="mbv-8L-Xqs" firstAttribute="bottom" secondItem="zKx-6a-iWl" secondAttribute="bottom" id="aSq-IA-dME"/>
+                            <constraint firstItem="Ft1-31-G9h" firstAttribute="centerX" secondItem="H5v-jD-q9X" secondAttribute="centerX" id="aa0-JY-t48"/>
+                            <constraint firstItem="Ft1-31-G9h" firstAttribute="centerY" secondItem="H5v-jD-q9X" secondAttribute="centerY" id="acc-kw-E7f"/>
+                            <constraint firstItem="Ft1-31-G9h" firstAttribute="centerX" secondItem="H5v-jD-q9X" secondAttribute="centerX" id="vaq-NF-Vo6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Us" id="J8h-iu-L53"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tzg-ge-ltI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-344.92753623188406" y="875.22321428571422"/>
+        </scene>
+        <!--Level 2 Stories-->
+        <scene sceneID="gq3-LX-rCS">
+            <objects>
+                <viewController id="8bS-qz-QgB" customClass="levelTwoStoriesViewController" customModule="8829569_Lab05" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="87S-42-8lo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kids_reading" translatesAutoresizingMaskIntoConstraints="NO" id="q2R-Yw-zF5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2g-9g-vRX">
+                                <rect key="frame" x="158.66666666666666" y="433" width="97" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Cheetah Math">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mhl-RI-AKF" kind="show" id="AK4-GD-h2I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bC4-i4-2Zb"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="q2R-Yw-zF5" firstAttribute="leading" secondItem="bC4-i4-2Zb" secondAttribute="leading" id="dPe-yo-jSd"/>
+                            <constraint firstItem="bC4-i4-2Zb" firstAttribute="trailing" secondItem="q2R-Yw-zF5" secondAttribute="trailing" id="gsq-PD-RGG"/>
+                            <constraint firstItem="q2R-Yw-zF5" firstAttribute="top" secondItem="bC4-i4-2Zb" secondAttribute="top" id="kMK-gO-B08"/>
+                            <constraint firstItem="bC4-i4-2Zb" firstAttribute="bottom" secondItem="q2R-Yw-zF5" secondAttribute="bottom" id="rq7-W6-fgw"/>
+                            <constraint firstItem="s2g-9g-vRX" firstAttribute="centerY" secondItem="87S-42-8lo" secondAttribute="centerY" id="ymA-Ap-qUf"/>
+                            <constraint firstItem="s2g-9g-vRX" firstAttribute="centerX" secondItem="87S-42-8lo" secondAttribute="centerX" id="zWN-KX-ioA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Level 2 Stories" id="jFk-2h-SJF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeD-b2-a4P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582.60869565217399" y="1244.8369565217392"/>
+        </scene>
+        <!--Cheetah Math-->
+        <scene sceneID="z7W-Lu-DRo">
+            <objects>
+                <viewController id="mhl-RI-AKF" customClass="cheetahMathViewController" customModule="8829569_Lab05" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jTi-Yq-F28">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheetah_pic" translatesAutoresizingMaskIntoConstraints="NO" id="aUh-YD-cxB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQV-F7-dos">
+                                <rect key="frame" x="65" y="255" width="284" height="386"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="b5x-CT-wwF"/>
+                                    <constraint firstAttribute="height" constant="386" id="yM1-sT-3TF"/>
+                                </constraints>
+                                <string key="text">Once upon a time, in the jungle so wild,
+A cheetah named Charlie was ever so mild.
+He loved to run fast, but there was something more,
+Mathematics intrigued him, that's for sure!
+
+He sprinted to school, with his spots so neat,
+Eager to solve problems and be really fleet.
+In math class, he raced through equations with glee,
+Adding and subtracting with lightning speed, you see.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZTe-bz-r6g"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="ZTe-bz-r6g" firstAttribute="bottom" secondItem="aUh-YD-cxB" secondAttribute="bottom" id="C4Z-ja-aDG"/>
+                            <constraint firstItem="aUh-YD-cxB" firstAttribute="leading" secondItem="ZTe-bz-r6g" secondAttribute="leading" id="G7L-rR-zTm"/>
+                            <constraint firstItem="ZTe-bz-r6g" firstAttribute="trailing" secondItem="aUh-YD-cxB" secondAttribute="trailing" id="Je4-lR-sIk"/>
+                            <constraint firstItem="OQV-F7-dos" firstAttribute="centerX" secondItem="jTi-Yq-F28" secondAttribute="centerX" id="Xrz-hD-7fb"/>
+                            <constraint firstItem="aUh-YD-cxB" firstAttribute="top" secondItem="jTi-Yq-F28" secondAttribute="top" id="YLe-R2-hZn"/>
+                            <constraint firstItem="OQV-F7-dos" firstAttribute="centerY" secondItem="jTi-Yq-F28" secondAttribute="centerY" id="ky2-NX-ujU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cheetah Math" id="yf5-Pc-KDZ">
+                        <barButtonItem key="rightBarButtonItem" title="Next Page" id="FHk-xG-1V7">
+                            <connections>
+                                <segue destination="h1a-C7-nGF" kind="show" id="J3d-7O-qjD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vT9-Eb-cvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702.8985507246377" y="1513.3928571428571"/>
+        </scene>
+        <!--Cheetah Math-->
+        <scene sceneID="vMH-LT-Ld7">
+            <objects>
+                <viewController id="h1a-C7-nGF" customClass="cheetahMathPTwoViewController" customModule="8829569_Lab05" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lIC-bK-Wtk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheetah_pic" translatesAutoresizingMaskIntoConstraints="NO" id="B6Y-n4-dZ7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmg-iH-Gfp">
+                                <rect key="frame" x="73" y="236" width="268" height="424"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="424" id="3up-IJ-omu"/>
+                                    <constraint firstAttribute="width" constant="268" id="bzm-Jc-fY3"/>
+                                </constraints>
+                                <string key="text">His friends were amazed by his numerical flair,
+They gathered around him, wanting to share.
+Together they learned, laughed, and had fun,
+Cheetah math adventures had just begun!
+
+With each problem they solved, they felt so strong,
+Their minds grew quick, as they calculated along.
+So remember, my friends, whether cheetah or not,
+Mathematics is cool, and it hits the spot!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Uc-BC-SI2"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="Cmg-iH-Gfp" firstAttribute="centerY" secondItem="lIC-bK-Wtk" secondAttribute="centerY" id="DyH-N8-SBE"/>
+                            <constraint firstItem="B6Y-n4-dZ7" firstAttribute="trailing" secondItem="2Uc-BC-SI2" secondAttribute="trailing" id="PMY-5c-PK6"/>
+                            <constraint firstItem="2Uc-BC-SI2" firstAttribute="bottom" secondItem="B6Y-n4-dZ7" secondAttribute="bottom" id="spx-mF-keU"/>
+                            <constraint firstItem="Cmg-iH-Gfp" firstAttribute="centerX" secondItem="lIC-bK-Wtk" secondAttribute="centerX" id="vRP-ul-Sd0"/>
+                            <constraint firstItem="B6Y-n4-dZ7" firstAttribute="top" secondItem="lIC-bK-Wtk" secondAttribute="top" id="vbf-ho-xGT"/>
+                            <constraint firstItem="B6Y-n4-dZ7" firstAttribute="leading" secondItem="2Uc-BC-SI2" secondAttribute="leading" id="ypa-pv-8Vi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cheetah Math" id="gNa-PP-N8s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fCK-1L-ewm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660.8695652173915" y="1462.5"/>
+        </scene>
+        <!--CDC?-->
+        <scene sceneID="MaN-F1-l9U">
+            <objects>
+                <viewController id="so1-rH-v0y" customClass="CdcViewController" customModule="8829569_Lab05" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pgb-jT-YLM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cdc" translatesAutoresizingMaskIntoConstraints="NO" id="p88-TB-NoZ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCb-vI-kkV">
+                                <rect key="frame" x="73.666666666666686" y="317" width="267" height="262"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="OWg-cC-y43"/>
+                                    <constraint firstAttribute="height" constant="262" id="rU8-Qw-r4O"/>
+                                </constraints>
+                                <string key="text">In a world of germs, the CDC saves the day,
+With lab coats and knowledge, they show us the way.
+From vaccines to advice, they keep us all strong,
+Protectors of health, all day long.
+The CDC, our heroes, fighting germs with a song.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0aI-D6-dYU"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="p88-TB-NoZ" secondAttribute="trailing" id="Hzi-Wj-yTS"/>
+                            <constraint firstItem="nCb-vI-kkV" firstAttribute="centerY" secondItem="Pgb-jT-YLM" secondAttribute="centerY" id="Olf-mB-h9P"/>
+                            <constraint firstItem="nCb-vI-kkV" firstAttribute="centerX" secondItem="Pgb-jT-YLM" secondAttribute="centerX" id="Wb7-9P-r4E"/>
+                            <constraint firstItem="0aI-D6-dYU" firstAttribute="bottom" secondItem="p88-TB-NoZ" secondAttribute="bottom" id="cqD-7K-RNc"/>
+                            <constraint firstItem="p88-TB-NoZ" firstAttribute="top" secondItem="0aI-D6-dYU" secondAttribute="top" id="cr6-hX-YHd"/>
+                            <constraint firstItem="p88-TB-NoZ" firstAttribute="leading" secondItem="Pgb-jT-YLM" secondAttribute="leading" id="sww-vC-dcv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CDC?" id="Ymh-pU-jHQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4H4-kl-fa8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2227.536231884058" y="691.07142857142856"/>
+        </scene>
+        <!--Level 1 Stories-->
+        <scene sceneID="9cq-Bd-sEA">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="PKX-1L-Nh0" customClass="levelOneStoriesViewController" customModule="8829569_Lab05" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xqo-BY-URa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kids_reading" translatesAutoresizingMaskIntoConstraints="NO" id="Lk0-C0-qD7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qJc-jf-tdT">
+                                <rect key="frame" x="168.66666666666666" y="393" width="77" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTK-HZ-Nlq">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <state key="normal" title="ABC Bunny">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Xz3-Gj-a8y" kind="show" id="zNf-jJ-4TJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSO-Ge-oMI">
+                                        <rect key="frame" x="0.0" y="80" width="77" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="CDC?">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="so1-rH-v0y" kind="show" id="VRW-JL-NK6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lq5-Om-CxN"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="qJc-jf-tdT" firstAttribute="centerY" secondItem="xqo-BY-URa" secondAttribute="centerY" id="Kr5-CZ-BxP"/>
+                            <constraint firstItem="Lk0-C0-qD7" firstAttribute="leading" secondItem="lq5-Om-CxN" secondAttribute="leading" id="S8F-mn-WF2"/>
+                            <constraint firstItem="qJc-jf-tdT" firstAttribute="centerX" secondItem="xqo-BY-URa" secondAttribute="centerX" id="T5R-qv-vB2"/>
+                            <constraint firstItem="Lk0-C0-qD7" firstAttribute="top" secondItem="lq5-Om-CxN" secondAttribute="top" id="XTS-W2-a9a"/>
+                            <constraint firstItem="lq5-Om-CxN" firstAttribute="trailing" secondItem="Lk0-C0-qD7" secondAttribute="trailing" id="YQ6-ac-ITW"/>
+                            <constraint firstItem="lq5-Om-CxN" firstAttribute="bottom" secondItem="Lk0-C0-qD7" secondAttribute="bottom" id="xaT-Wi-eWr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Level 1 Stories" id="mr2-ti-fhT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYq-1v-VdR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002.8985507246377" y="91.304347826086968"/>
+        </scene>
+        <!--ABC Bunny-->
+        <scene sceneID="GFU-Ll-y9U">
+            <objects>
+                <viewController id="Xz3-Gj-a8y" customClass="newBunnyPOneViewController" customModule="8829569_Lab05" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sok-5F-PSO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bunny" translatesAutoresizingMaskIntoConstraints="NO" id="bZD-Nq-hii">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQT-y5-GpW">
+                                <rect key="frame" x="47.666666666666657" y="224.99999999999997" width="319" height="446.33333333333326"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="319" id="4w3-8v-fJd"/>
+                                    <constraint firstAttribute="height" constant="446.32999999999998" id="6B1-B9-PyZ"/>
+                                </constraints>
+                                <string key="text">A for Apple, big and red
+ 
+ B for Bunny snug a-bed
+ C for Crash! D for Dash!
+
+ E for Elsewhere in a flash
+F for Frog – he’s fat and funny
+ 
+ “Looks like rain,” says he to Bunny
+G for Gale! H for Hail!
+ 
+ Hippy-hop goes Bunny’s tail
+I for Insects here and there
+ 
+ J for the Jay with jaunty air
+K for Kitten, catnip-crazy
+  L for Lizard – look how lazy
+M for Mealtime – munch, munch, munch!
+ 
+ M-m-m! these greens are good for lunch!
+N for Napping in a Nook
+ </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="axt-9c-s68"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="xQT-y5-GpW" firstAttribute="centerX" secondItem="sok-5F-PSO" secondAttribute="centerX" id="1Dx-2I-y1F"/>
+                            <constraint firstItem="bZD-Nq-hii" firstAttribute="top" secondItem="axt-9c-s68" secondAttribute="top" id="89Y-pp-Dvl"/>
+                            <constraint firstItem="bZD-Nq-hii" firstAttribute="trailing" secondItem="axt-9c-s68" secondAttribute="trailing" id="EOd-jZ-O64"/>
+                            <constraint firstItem="axt-9c-s68" firstAttribute="bottom" secondItem="bZD-Nq-hii" secondAttribute="bottom" id="Yym-AY-h81"/>
+                            <constraint firstItem="xQT-y5-GpW" firstAttribute="centerY" secondItem="sok-5F-PSO" secondAttribute="centerY" id="fvT-sD-N4W"/>
+                            <constraint firstItem="bZD-Nq-hii" firstAttribute="leading" secondItem="axt-9c-s68" secondAttribute="leading" id="sZ3-6z-bPs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ABC Bunny" id="EPs-lu-3c3">
+                        <barButtonItem key="rightBarButtonItem" title="Next Page" id="EnV-ga-9fr">
+                            <connections>
+                                <segue destination="SML-Ge-dAC" kind="show" id="P5J-Az-41s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jk3-6I-B6p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789.8550724637682" y="-2.0089285714285712"/>
+        </scene>
+        <!--ABC Bunny-->
+        <scene sceneID="eVx-fe-jUW">
+            <objects>
+                <viewController id="SML-Ge-dAC" customClass="newBunnyPTwoViewController" customModule="8829569_Lab05" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K3u-Dn-mf1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bunny" translatesAutoresizingMaskIntoConstraints="NO" id="PmM-Jk-jxI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e02-gT-ddG">
+                                <rect key="frame" x="43" y="189" width="0.0" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">
+ O for Owl with bookish look
+P for prickly Porcupine
+ 
+ Pins and needles on his spine
+Q for Quail R for Rail
+ 
+ S for Squirrel Swishy-tail
+T for Tripping back to Town
+ 
+ U for Up and Up-side-down
+V for View Valley too
+ 
+ W – “We welcome you!”
+X for eXit – off, away!
+ 
+ That’s enough for us today
+Y for You, take one last look
+ 
+ Z for Zero – close the book! END</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5h-b6-BQI">
+                                <rect key="frame" x="80.666666666666686" y="245" width="253" height="406"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="406" id="WjY-KC-M0b"/>
+                                    <constraint firstAttribute="width" constant="253" id="kCF-lU-MD2"/>
+                                </constraints>
+                                <string key="text">
+ O for Owl with bookish look
+P for prickly Porcupine
+ 
+ Pins and needles on his spine
+Q for Quail R for Rail
+ 
+ S for Squirrel Swishy-tail
+T for Tripping back to Town
+ 
+ U for Up and Up-side-down
+V for View Valley too
+ 
+ W – “We welcome you!”
+X for eXit – off, away!
+ 
+ That’s enough for us today
+Y for You, take one last look
+ 
+ Z for Zero – close the book! END</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A2t-An-P2Y"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="y5h-b6-BQI" firstAttribute="centerY" secondItem="K3u-Dn-mf1" secondAttribute="centerY" id="Fbz-33-rc7"/>
+                            <constraint firstItem="PmM-Jk-jxI" firstAttribute="top" secondItem="A2t-An-P2Y" secondAttribute="top" id="J1A-23-e4N"/>
+                            <constraint firstItem="PmM-Jk-jxI" firstAttribute="leading" secondItem="A2t-An-P2Y" secondAttribute="leading" id="PL0-3J-XsI"/>
+                            <constraint firstItem="PmM-Jk-jxI" firstAttribute="trailing" secondItem="A2t-An-P2Y" secondAttribute="trailing" id="Uxm-v3-1yT"/>
+                            <constraint firstItem="A2t-An-P2Y" firstAttribute="bottom" secondItem="PmM-Jk-jxI" secondAttribute="bottom" id="VNq-pa-1Bd"/>
+                            <constraint firstItem="y5h-b6-BQI" firstAttribute="centerX" secondItem="K3u-Dn-mf1" secondAttribute="centerX" id="odn-N9-1ks"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ABC Bunny" id="iH5-R9-gSx">
+                        <barButtonItem key="backBarButtonItem" title="Previous Page" id="liZ-sW-Bb0"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tcz-36-XeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2786.9565217391305" y="-10.044642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bunny" width="3837" height="5756"/>
+        <image name="cdc" width="4000" height="2667"/>
+        <image name="cheetah_pic" width="4480" height="6720"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="kids_reading" width="3825" height="5737"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
